@@ -17,7 +17,7 @@ const Title = styled.h1`
   font-weight: bold;
   font-size: 28px;
   letter-spacing: 2px;
-  color: #ffc236;
+  color: blak;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 

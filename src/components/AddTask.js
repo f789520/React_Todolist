@@ -64,7 +64,7 @@ function AddTask() {
       <Input
         name="addtask"
         type="text"
-        placeholder={"測試紀錄 ..."}
+        placeholder={"add todo ..."}
         value={newTask}
         onChange={handleChange}
       />

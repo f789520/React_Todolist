@@ -22,10 +22,15 @@ export function toggleTask(idx){
     };
 }
 
+ 
 
-// export function editTask(taskName){
-//     return {
-//         type: types.EDIT_TASK,
-//         taskName
-//     };
-// }
+
+export function editTask(idx,taskName){
+    return {
+        type: types.EDIT_TASK,
+        idx,
+        taskName,
+    };
+}
+
+
