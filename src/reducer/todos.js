@@ -6,7 +6,7 @@ const initialTasks = [
   { taskName: "task3", isCompleted: false },
 ];
 
-export default function todos(state = initialTasks /*目前狀態物件*/, action/*接收到的行動物件*/ ) {
+export default function todos(state = initialTasks /*目前狀態物件*/, action/*接收到的行動物件*/) {
   switch (action.type) {
     case types.ADD_TASK:
       return [
@@ -16,6 +16,15 @@ export default function todos(state = initialTasks /*目前狀態物件*/, actio
           isCompleted: false,
         },
       ];
+
+    // case types.EDIT_TASK:
+    //   return [
+    //     ...state,
+    //     {
+    //       taskName: action.taskName,
+    //       isCompleted: false,
+    //     },
+    //   ];
     case types.DELETE_TASK:
       return [...state.slice(0, action.idx), ...state.slice(action.idx + 1)];
     case types.TOGGLE_TASK:

@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import * as actions from "../actions/todos";
 
+  
+
 const Container = styled.div`
   background-color: white;
   width: 80%;
@@ -33,6 +35,7 @@ const Button = styled.div`
   color: white;
   letter-spacing: 0.05em;
   cursor: pointer;
+  margin-right:10px;
 
   &:hover {
     background-color: #F5727E;
@@ -42,6 +45,7 @@ const Button = styled.div`
 function TaskItem(props) {
   const dispatch = useDispatch();
 
+    
   return (
     <Container>
       <CheckBox
@@ -50,6 +54,8 @@ function TaskItem(props) {
         onChange={() => dispatch(actions.toggleTask(props.task.idx))}
       />
       <TaskName>{props.task.taskName}</TaskName>
+
+  
       <Button onClick={() => dispatch(actions.deleteTask(props.task.idx))}>
         Delete
       </Button>
@@ -58,3 +64,5 @@ function TaskItem(props) {
 }
 
 export default TaskItem;
+
+ 
